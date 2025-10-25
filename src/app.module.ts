@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { EmployeeModule } from './employee/employee.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -16,9 +17,11 @@ import { EmployeeModule } from './employee/employee.module';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       autoLoadEntities: true,
-      synchronize: process.env.NODE_ENV !== 'production', // ❌ disable sync in prod
+      synchronize: false, // never use in prod
     }),
     EmployeeModule,
+    HealthModule,
   ],
+  controllers: [],
 })
 export class AppModule {}

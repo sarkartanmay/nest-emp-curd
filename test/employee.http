@@ -6,12 +6,27 @@ POST {{baseUrl}}
 Content-Type: application/json
 
 {
-  "firstName": "Ranjan",
+  "firstName": "Tamojit",
   "lastName": "Dey",
   "dob": "1990-01-01",
   "address": "Kolkata",
-  "pan": "ABCDEe234D",
-  "mobile": "9823543210"
+  "pan": "BBCDEe234D",
+  "mobile": "9823243210"
+}
+
+###
+
+### 1️⃣ Create Employee
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "firstName": "Ranjan",
+  "lastName": "Das",
+  "dob": "1990-01-01",
+  "address": "Kolkata",
+  "pan": "BACDEe234D",
+  "mobile": "9123243210"
 }
 
 ###

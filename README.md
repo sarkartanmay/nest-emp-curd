@@ -96,3 +96,26 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Migration 
+
+### Code 
+```
+nest g module employee
+nest g controller employee
+nest g service employee
+
+```
+
+### Create migrations
+```
+npm run migration:generate -- migrations/CreateEmployeeTable.ts -d ormconfig.ts
+npm run migration:generate -- migrations/CreateEmployeeTable.ts --dataSource ormconfig.ts
+```
+
+### Update migrations
+
+```
+npm run migration:run -- --dataSource ormconfig.ts
+```
+
