@@ -1,0 +1,38 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn.lock
+# package-lock.json
+
+# TypeScript output
+dist
+
+# Environment files (optional, can be added separately in Docker)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker files (if you want to ignore them)
+Dockerfile.dev
+.dockerignore
+
+# Test coverage
+coverage
