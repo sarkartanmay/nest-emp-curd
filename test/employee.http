@@ -1,0 +1,40 @@
+### Base URL
+@baseUrl = http://localhost:3000/employees
+
+### 1️⃣ Create Employee
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "firstName": "Ranjan",
+  "lastName": "Dey",
+  "dob": "1990-01-01",
+  "address": "Kolkata",
+  "pan": "ABCDEe234D",
+  "mobile": "9823543210"
+}
+
+###
+
+### 2️⃣ Get All Employees
+GET {{baseUrl}}
+
+###
+
+### 3️⃣ Get Employee by ID
+GET {{baseUrl}}/1
+
+###
+
+### 4️⃣ Update Employee
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "address": "Updated Address, Salt Lake, Kolkata"
+}
+
+###
+
+### 5️⃣ Delete Employee
+DELETE {{baseUrl}}/1
