@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nestjs-app:
+    image: tanmaysarkar/nest-emp-curd:${APP_VERSION}
+    ports:
+      - ${PUBLIC_APP_PORT}:3000
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    networks:
+      - internal_app_communication
+      
+networks:
+  internal_app_communication:
+    external: true  

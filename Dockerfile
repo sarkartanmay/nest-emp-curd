@@ -22,9 +22,8 @@ WORKDIR /app
 COPY --from=builder /app/package*.json ./
 RUN npm ci --omit=dev
 
-COPY --from=builder /app/dist ./dist
-COPY .env .env
+COPY --from=builder /app/dist ./compiled
 
 EXPOSE 3000
 
-CMD ["node", "dist/main.js"]
+CMD ["node", "compiled/src/main.js"]
